@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ovcrobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-4.8819E-07 -1.5953E-07 0.063106"
+        rpy="0 0 0" />
+      <mass
+        value="3.1559" />
+      <inertia
+        ixx="0.029314"
+        ixy="-4.5506E-08"
+        ixz="-2.4771E-10"
+        iyy="0.031511"
+        iyz="6.5169E-10"
+        izz="0.057344" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L1_link">
+    <inertial>
+      <origin
+        xyz="0.03095 -0.036089 0.053315"
+        rpy="0 0 0" />
+      <mass
+        value="1.0237" />
+      <inertia
+        ixx="0.0015703"
+        ixy="1.4757E-06"
+        ixz="-6.9894E-05"
+        iyy="0.001198"
+        iyz="3.5362E-06"
+        izz="0.0016531" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1_joint"
+    type="revolute">
+    <origin
+      xyz="0 1.2332E-05 0.218"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L2_link">
+    <inertial>
+      <origin
+        xyz="0.037865 -0.0080846 0.14131"
+        rpy="0 0 0" />
+      <mass
+        value="0.57326" />
+      <inertia
+        ixx="0.0039218"
+        ixy="5.9826E-09"
+        ixz="-0.00097761"
+        iyy="0.0042712"
+        iyz="5.9204E-09"
+        izz="0.00053529" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2_joint"
+    type="revolute">
+    <origin
+      xyz="0.037754 0.059488 0.073237"
+      rpy="0 0 0" />
+    <parent
+      link="L1_link" />
+    <child
+      link="L2_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L3_link">
+    <inertial>
+      <origin
+        xyz="-0.030158 -0.1017 0.0089663"
+        rpy="0 0 0" />
+      <mass
+        value="0.80243" />
+      <inertia
+        ixx="0.0014584"
+        ixy="-0.00024621"
+        ixz="0.00018891"
+        iyy="0.0016357"
+        iyz="7.0594E-05"
+        izz="0.0016708" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3_joint"
+    type="revolute">
+    <origin
+      xyz="0.077646 0 0.28978"
+      rpy="0 0.2618 0" />
+    <parent
+      link="L2_link" />
+    <child
+      link="L3_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L4_link">
+    <inertial>
+      <origin
+        xyz="-7.3983E-07 -0.00096878 0.11233"
+        rpy="0 0 0" />
+      <mass
+        value="0.69021" />
+      <inertia
+        ixx="0.0055744"
+        ixy="5.3045E-10"
+        ixz="-1.0199E-08"
+        iyy="0.004821"
+        iyz="5.6439E-05"
+        izz="0.0011414" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4_joint"
+    type="revolute">
+    <origin
+      xyz="-0.06 -0.113 0.108"
+      rpy="0 0 0" />
+    <parent
+      link="L3_link" />
+    <child
+      link="L4_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L5_link">
+    <inertial>
+      <origin
+        xyz="-0.022588 -0.0029039 0.0020945"
+        rpy="0 0 0" />
+      <mass
+        value="0.32271" />
+      <inertia
+        ixx="0.00043022"
+        ixy="1.5874E-05"
+        ixz="8.4359E-06"
+        iyy="0.00028775"
+        iyz="-9.2362E-07"
+        izz="0.0004593" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0015 0.28"
+      rpy="0 0 0" />
+    <parent
+      link="L4_link" />
+    <child
+      link="L5_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L6_link">
+    <inertial>
+      <origin
+        xyz="0.0010608 -7.3178E-05 0.033044"
+        rpy="0 0 0" />
+      <mass
+        value="0.072475" />
+      <inertia
+        ixx="2.451E-05"
+        ixy="-4.7257E-08"
+        ixz="3.945E-06"
+        iyy="3.7051E-05"
+        iyz="-4.7465E-08"
+        izz="2.2666E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6_joint"
+    type="revolute">
+    <origin
+      xyz="-0.05 0 0.046"
+      rpy="0 -0.2618 0" />
+    <parent
+      link="L5_link" />
+    <child
+      link="L6_link" />
+    <axis
+      xyz="0.25882 0 0.96593" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L7_link">
+    <inertial>
+      <origin
+        xyz="0.036479 0.010378 -0.003307"
+        rpy="0 0 0" />
+      <mass
+        value="0.010354" />
+      <inertia
+        ixx="1.6581E-06"
+        ixy="-4.7346E-08"
+        ixz="2.3376E-07"
+        iyy="2.8867E-06"
+        iyz="4.2874E-07"
+        izz="2.8973E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L7_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64314 0.61569 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L7_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J7_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.0052129 -0.033 0.067478"
+      rpy="-2.8798 0 1.5708" />
+    <parent
+      link="L6_link" />
+    <child
+      link="L7_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L8_link">
+    <inertial>
+      <origin
+        xyz="0.036479 0.010378 -0.0033069"
+        rpy="0 0 0" />
+      <mass
+        value="0.010354" />
+      <inertia
+        ixx="1.6581E-06"
+        ixy="-4.7347E-08"
+        ixz="2.3376E-07"
+        iyy="2.8867E-06"
+        iyz="4.2874E-07"
+        izz="2.8973E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L8_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64314 0.61569 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ovcrobot/meshes/L8_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J8_joint"
+    type="prismatic">
+    <origin
+      xyz="0.038254 0.033051 0.055832"
+      rpy="2.8798 0 -1.5708" />
+    <parent
+      link="L6_link" />
+    <child
+      link="L8_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
